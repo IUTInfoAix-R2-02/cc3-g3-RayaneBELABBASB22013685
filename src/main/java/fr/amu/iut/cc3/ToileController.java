@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
@@ -51,9 +52,10 @@ public class ToileController implements Initializable {
     private static int noteMaximale = 20;
     private TextField sourceOfEvent;
 
-    private EventHandler<ActionEvent> gestionnaireEvenement;
-
-    private StringProperty valeursComp = new SimpleStringProperty();
+    @FXML
+    private Label Erreur1;
+    @FXML
+    private Label Erreur2;
     @FXML
     private Circle comp1C;
     @FXML
@@ -92,6 +94,7 @@ public class ToileController implements Initializable {
         sourceOfEvent = (TextField) event.getSource();
         int axe = GridPane.getRowIndex(sourceOfEvent)+1;
         double valeur= Integer.parseInt(sourceOfEvent.getText());
+        verification(valeur);
         int centreX = getXRadarChart(valeur , axe);
         int centreY = getYRadarChart(valeur, axe);
         comp1C.setCenterX(centreX);
@@ -104,6 +107,7 @@ public class ToileController implements Initializable {
         sourceOfEvent = (TextField) event.getSource();
         int axe = GridPane.getRowIndex(sourceOfEvent)+1;
         double valeur= Integer.parseInt(sourceOfEvent.getText());
+        verification(valeur);
         int centreX = getXRadarChart(valeur , axe);
         int centreY = getYRadarChart(valeur, axe);
         comp2C.setCenterX(centreX);
@@ -116,6 +120,7 @@ public class ToileController implements Initializable {
         sourceOfEvent = (TextField) event.getSource();
         int axe = GridPane.getRowIndex(sourceOfEvent)+1;
         double valeur= Integer.parseInt(sourceOfEvent.getText());
+        verification(valeur);
         int centreX = getXRadarChart(valeur , axe);
         int centreY = getYRadarChart(valeur, axe);
         comp3C.setCenterX(centreX);
@@ -128,6 +133,7 @@ public class ToileController implements Initializable {
         sourceOfEvent = (TextField) event.getSource();
         int axe = GridPane.getRowIndex(sourceOfEvent)+1;
         double valeur= Integer.parseInt(sourceOfEvent.getText());
+        verification(valeur);
         int centreX = getXRadarChart(valeur , axe);
         int centreY = getYRadarChart(valeur, axe);
         comp4C.setCenterX(centreX);
@@ -140,6 +146,7 @@ public class ToileController implements Initializable {
         sourceOfEvent = (TextField) event.getSource();
         int axe = GridPane.getRowIndex(sourceOfEvent)+1;
         double valeur= Integer.parseInt(sourceOfEvent.getText());
+        verification(valeur);
         int centreX = getXRadarChart(valeur , axe);
         int centreY = getYRadarChart(valeur, axe);
         comp5C.setCenterX(centreX);
@@ -152,10 +159,27 @@ public class ToileController implements Initializable {
         sourceOfEvent = (TextField) event.getSource();
         int axe = GridPane.getRowIndex(sourceOfEvent)+1;
         double valeur= Integer.parseInt(sourceOfEvent.getText());
+        verification(valeur);
         int centreX = getXRadarChart(valeur , axe);
         int centreY = getYRadarChart(valeur, axe);
         comp6C.setCenterX(centreX);
         comp6C.setCenterY(centreY);
         comp6C.setVisible(true);
     }
+
+public void verification(double valeur){
+    if(valeur > 20)  {
+
+        Erreur1.setVisible(true);
+        Erreur2.setVisible(true);
+
+    }
+}
+
+    @FXML
+    public void BtnVider (ActionEvent event){
+
+    }
+
+
 }

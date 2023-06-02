@@ -56,6 +56,8 @@
                 <TextField fx:id="comp5" prefWidth="60" GridPane.columnIndex="1" GridPane.rowIndex="4" onAction="#Cercle5"/>
                 <Label prefHeight="65.0" prefWidth="200.0" text="Compétence 6 - Collaborer   " GridPane.columnIndex="0" GridPane.rowIndex="5" />
                 <TextField fx:id="comp6" prefWidth="60" GridPane.columnIndex="1" GridPane.rowIndex="5" onAction="#Cercle6"/>
+                <Label fx:id="Erreur1" text="Erreur de saisie :"  GridPane.columnIndex="0" GridPane.rowIndex="6" visible="false" style="-fx-text-fill: red" />
+                <Label fx:id="Erreur2" text="Les valeurs doivent être entre 0 et 20" GridPane.columnIndex="0" GridPane.rowIndex="7" visible="false" style="-fx-text-fill: red" />
             </GridPane>
         <!-- Les boutons -->
         <GridPane alignment="BOTTOM_CENTER">
