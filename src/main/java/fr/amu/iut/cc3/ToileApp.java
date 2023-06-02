@@ -15,7 +15,7 @@ public class ToileApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("toile.fxml"));
         primaryStage.setTitle("Résultats aux différentes compétences du BUT");
         primaryStage.setResizable(false);
-        primaryStage.setScene( new Scene(root, 700,800) );
+        primaryStage.setScene( new Scene(root, 720,500) );
         primaryStage.show();
     }
 
