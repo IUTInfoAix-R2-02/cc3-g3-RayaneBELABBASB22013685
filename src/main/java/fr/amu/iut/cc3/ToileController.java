@@ -177,8 +177,19 @@ public void verification(double valeur){
 }
 
     @FXML
-    public void BtnVider (ActionEvent event){
-
+    public void BtnVider (){
+        comp1.setText("");
+        comp1C.setVisible(false);
+        comp2.setText("");
+        comp2C.setVisible(false);
+        comp3.setText("");
+        comp3C.setVisible(false);
+        comp4.setText("");
+        comp4C.setVisible(false);
+        comp5.setText("");
+        comp5C.setVisible(false);
+        comp6.setText("");
+        comp6C.setVisible(false);
     }
 
 
