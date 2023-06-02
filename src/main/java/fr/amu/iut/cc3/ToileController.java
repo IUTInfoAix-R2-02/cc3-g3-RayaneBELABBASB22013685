@@ -30,10 +30,7 @@ import java.util.ResourceBundle;
 
 public class ToileController implements Initializable {
 
-    @FXML
-    private Button btnTracer;
-    @FXML
-    private Button btnVider;
+
     @FXML
     private TextField comp1;
     @FXML
@@ -68,7 +65,18 @@ public class ToileController implements Initializable {
     private Circle comp5C;
     @FXML
     private Circle comp6C;
-
+    @FXML
+    private Line lign1;
+    @FXML
+    private Line lign2;
+    @FXML
+    private Line lign3;
+    @FXML
+    private Line lign4;
+    @FXML
+    private Line lign5;
+    @FXML
+    private Line lign6;
 
 
     @Override
@@ -190,7 +198,17 @@ public void verification(double valeur){
         comp5C.setVisible(false);
         comp6.setText("");
         comp6C.setVisible(false);
+        lign1.setVisible(false);
+        lign2.setVisible(false);
+        lign3.setVisible(false);
+        lign4.setVisible(false);
+        lign5.setVisible(false);
+        lign6.setVisible(false);
     }
+    @FXML
+    public void BtnTracer (ActionEvent event) {
+        lign1.setStartX();
 
+    }
 
 }

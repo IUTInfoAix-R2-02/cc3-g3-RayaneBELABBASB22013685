@@ -37,6 +37,12 @@
         <Circle fx:id="comp4C" visible="false" radius="5"/>
         <Circle fx:id="comp5C" visible="false" radius="5"/>
         <Circle fx:id="comp6C" visible="false" radius="5"/>
+        <Line fx:id="lign1"  visible="false" />
+        <Line fx:id="lign2"  visible="false" />
+        <Line fx:id="lign3"  visible="false" />
+        <Line fx:id="lign4"  visible="false" />
+        <Line fx:id="lign5"  visible="false" />
+        <Line fx:id="lign6"  visible="false" />
 
         <Pane fx:id="toile" styleClass="toile" />
     </Pane>
@@ -61,7 +67,7 @@
             </GridPane>
         <!-- Les boutons -->
         <GridPane alignment="BOTTOM_CENTER">
-            <Button fx:id="btnTracer" text="Tracer" prefHeight="30" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button fx:id="btnTracer" text="Tracer" prefHeight="30" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#BtnTracer" />
             <Label text="       " prefHeight="30" GridPane.columnIndex="1" GridPane.rowIndex="0" />
             <Button fx:id="btnVider" text="Vider" prefHeight="30" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#BtnVider"/>
         </GridPane>
